@@ -1,0 +1,40 @@
+*{
+margin:0px;
+padding: 0px;
+}
+html,body{
+	width:90%;
+	margin:0px auto;
+	padding:0px;
+	background-color:grey;
+
+}
+body{
+	text-align: center;
+	margin:10px;
+}
+wrap{
+
+}
+h1{
+font-family: 'Montserrat', sans-serif;
+}
+p{
+	font-family: 'Raleway', sans-serif;
+
+}
+/* OUR FONTS
+* font-family: 'Montserrat', sans-serif;
+* font-family: 'Raleway', sans-serif;
+*
+*/
+nav{
+	font-family: 'Montserrat', sans-serif;
+}
+.pageLinks a{
+	text-decoration: none;
+	color:black;
+}
+.pageLinks{
+	display: inline-block;
+}
