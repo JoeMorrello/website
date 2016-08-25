@@ -3,25 +3,26 @@ margin:0px;
 padding: 0px;
 }
 html,body{
-	width:90%;
 	margin:0px auto;
 	padding:0px;
-	background-color:grey;
-
+	background-color:black;
+	color:white;
+	font-size: 24px;
 }
 body{
 	text-align: center;
-	margin:10px;
-}
-wrap{
-
+	
 }
 h1{
 font-family: 'Montserrat', sans-serif;
+color:red;
 }
 p{
-	font-family: 'Raleway', sans-serif;
-
+	font-family: 'Raleway', sans-serif;\	
+}
+a{
+	color:white;
+	text-decoration: none;
 }
 /* OUR FONTS
 * font-family: 'Montserrat', sans-serif;
@@ -31,10 +32,32 @@ p{
 nav{
 	font-family: 'Montserrat', sans-serif;
 }
-.pageLinks a{
+.pageLinks li a{
 	text-decoration: none;
-	color:black;
+	width:100%;
+	font-size: 32px;
+	
 }
 .pageLinks{
-	display: inline-block;
+	display: block;
+	border: 1px solid red;
+	height:40px;
+	line-height: 40px;
+}
+.small{
+	font-size: 16px;
+}
+.medium{
+	font-size: 24px;
+}
+.large{
+	font-size: 32px;
+}
+#photo{
+	border-radius:15px;
+ max-height:100%;
+  max-width: 100%;
+}
+#photoContainer{
+	margin:10px;
 }
