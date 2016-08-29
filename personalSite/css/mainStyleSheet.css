@@ -2,6 +2,11 @@
 margin:0px;
 padding: 0px;
 }
+/* OUR FONTS
+* font-family: 'Montserrat', sans-serif;
+* font-family: 'Raleway', sans-serif;
+*
+*/
 html,body{
 	margin:0px auto;
 	padding:0px;
@@ -11,11 +16,15 @@ html,body{
 }
 body{
 	text-align: center;
-	
+}
+h1,h2,h3,h4,h5,h6{
+font-family: 'Montserrat', sans-serif;
 }
 h1{
-font-family: 'Montserrat', sans-serif;
-color:red;
+	color:red;
+}
+h2{
+	color:grey;
 }
 p{
 	font-family: 'Raleway', sans-serif;\	
@@ -24,25 +33,21 @@ a{
 	color:white;
 	text-decoration: none;
 }
-/* OUR FONTS
-* font-family: 'Montserrat', sans-serif;
-* font-family: 'Raleway', sans-serif;
-*
-*/
 nav{
 	font-family: 'Montserrat', sans-serif;
 }
 .pageLinks li a{
 	text-decoration: none;
 	width:100%;
-	font-size: 32px;
-	
+	font-size: 32px;	
 }
 .pageLinks{
 	display: block;
-	border: 1px solid red;
+	border: 3px solid red;
+	border-radius: 15px;
 	height:40px;
 	line-height: 40px;
+	margin: 10px;
 }
 .small{
 	font-size: 16px;
@@ -54,10 +59,17 @@ nav{
 	font-size: 32px;
 }
 #photo{
-	border-radius:15px;
- max-height:100%;
-  max-width: 100%;
+	border-radius:20px;
+ max-height:80%;
+  max-width: 80%;
 }
 #photoContainer{
 	margin:10px;
+	margin-bottom: 0px;
+}
+#main{
+	margin:10px;
+}
+#footer{
+	background-color:grey;
 }
