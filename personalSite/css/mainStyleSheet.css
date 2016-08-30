@@ -43,8 +43,6 @@ nav{
 }
 .pageLinks{
 	display: block;
-	border: 3px solid red;
-	border-radius: 15px;
 	height:40px;
 	line-height: 40px;
 	margin: 10px;
