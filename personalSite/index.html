@@ -25,15 +25,22 @@
 				CSS ANIMATIONS
 			-->
 				<!--NEED SOME FORM OF LOGO THAT WILL BE ABOVE HERE-->
-				<nav class='pageNavigation'>
+				<!--SWITCH pageNavigation to sideNavigation-->
+				<div id="mySidenav" class="sidenav">
+  					<a class="closebtn" onclick="closeNav()">&times;</a>
+					<nav class='pageNavigation'>
 					<ul class='navigationLinks'>
-						<li class='pageLinks'><a href='#'>close</a></li>
+						<li class='pageLinks'><a onclick="openNav()" href='#'>Menu</a></li>
 						<li class='pageLinks'><a href='#'>About me</a></li>
 						<li class='pageLinks'><a href='#'>My works</a></li>
 						<li class='pageLinks'><a href='#'>My skills</a></li>
 						<li class='pageLinks'><a href='#'>contact me</a></li>
 					</ul>
 				</nav>
+				</div>
+			<a onclick="openNav()" href='#'><img src='C:\Users\JoMor\Documents\GitHub\website\personalSite\images/logo_white.png'></a>
+			
+	
 			</div>
 			<div id='main'>
 				<div id='photoContainer'>
@@ -52,5 +59,14 @@
 		</div>
 	</body>
 	<script src='jquery-3.1.0.min.js'></script>
+	<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 		
 </html>
