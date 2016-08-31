@@ -24,10 +24,11 @@ h1{
 	color:red;
 }
 h2{
-	color:grey;
+	color:white;
 }
 p{
-	font-family: 'Raleway', sans-serif;\	
+	font-family: 'Raleway', sans-serif;
+	margin: 20px;	
 }
 a{
 	color:white;
@@ -35,14 +36,20 @@ a{
 }
 nav{
 	font-family: 'Montserrat', sans-serif;
+	border-bottom: solid red;
 }
 .pageLinks li a{
 	text-decoration: none;
 	width:100%;
-	font-size: 32px;	
+	font-size: 32px;
+	border-bottom: 3px solid rgba(255, 0, 0, 0);
+	transition: border-color .5s;	
+}
+.pageLinks li:hover a{
+	border-color:red;
+	transition: border-color .5s;
 }
 .pageLinks{
-	display: block;
 	height:40px;
 	line-height: 40px;
 	margin: 10px;
@@ -58,8 +65,8 @@ nav{
 }
 #photo{
 	border-radius:20px;
- max-height:80%;
-  max-width: 80%;
+ max-height:50%;
+  max-width: 50%;
 }
 #photoContainer{
 	margin:10px;
