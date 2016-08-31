@@ -38,17 +38,17 @@ nav{
 	font-family: 'Montserrat', sans-serif;
 	border-bottom: solid red;
 }
-.pageLinks li a{
+.navigationLinks li a{
 	text-decoration: none;
 	width:100%;
-	font-size: 32px;
-	border-bottom: 3px solid rgba(255, 0, 0, 0);
-	transition: border-color .5s;	
+	font-size: 24px;
+	 border-bottom: 3px solid black;
+	transition: border-color 1.5s;
 }
-.pageLinks li:hover a{
-	border-color:red;
-	transition: border-color .5s;
+.navigationLinks li:hover a{
+	border-color: red;
 }
+
 .pageLinks{
 	height:40px;
 	line-height: 40px;
@@ -78,3 +78,5 @@ nav{
 #footer{
 	background-color:grey;
 }
+/*http://www.w3schools.com/howto/howto_js_sidenav.asp*/
+	/*add Side nav for navigation elements*/
