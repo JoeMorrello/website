@@ -96,21 +96,28 @@ a{
 }
 nav{
 	font-family: 'Montserrat', sans-serif;
-	border-bottom: solid red;
 }
 .navigationLinks li a{
 	text-decoration: none;
 	width:100%;
 	font-size: 24px;
-	 border-bottom: 3px solid black;
-	transition: border-color 1.5s;
 }
-.navigationLinks li:hover a{
-	border-color: red;
-}
+
 
 .pageLinks{
 	height:40px;
 	line-height: 40px;
 	margin: 10px;
+}
+#logo{
+
+display: block;
+margin:10px;
+width:100px;
+height:100px;
+opacity:1; 
+transition: opacity .5s;
+}
+#logo:hover{
+opacity:.75;
 }
