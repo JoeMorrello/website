@@ -5,6 +5,10 @@
 		<meta name='geo.region' content='Us-NY'>
 		<meta name='geo.placename' content='New York'>
 		<meta name="keywords" content="Computer Engineer, Developer,New York,New Jersey,East Coast, Job, application, Resume, HTML, CSS, Java, Android, C, C++, Coding, Programmer, Development, git, vim, emacs, Eclipse, Android Studio">
+	<meta name="description" content="Joe is a Computer Engineer with experience in software design and web development. He currently works for FCB Health in New York City, and lives in New Jersey." />
+    <meta name="author" content="Joe Morrello">
+    <meta name="geo.region" content="US-NY" />
+    <meta name="geo.placename" content="New York" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href= 'css/mainStyleSheet.css' rel='stylesheet'>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
@@ -12,45 +16,63 @@
 	<body>
 		<div id ='wrap'>
 			<div id='header'>
-			<!--navigation, logo and everything that will be across all webpages and layouts -->
-			<!--THINGS THAT NEED TO BE ADDED:
-
-				LOGO
-				PAGE LINKS
-				NAVIGATION STYLING(MOBILE FIRST)
-				CSS ANIMATIONS
-			-->
-				<!--NEED SOME FORM OF LOGO THAT WILL BE ABOVE HERE-->
-				<nav class='pageNavigation'>
-					<ul class='navigationLinks'>
-						<a href='#'><li class='pageLinks'>close</li></a>
-						<a href='file:///C:/Users/JoMor/Documents/GitHub/website/personalSite/aboutme.html'><li class='pageLinks'>About me</li></a>
-						<a href='file:///C:/Users/JoMor/Documents/GitHub/website/personalSite/myworks.html'><li class='pageLinks'>My works</li></a>
-						<a href='file:///C:/Users/JoMor/Documents/GitHub/website/personalSite/myskills.hmtl'><li class='pageLinks'>My skills</li></a>
-						<a href='file:///C:/Users/JoMor/Documents/GitHub/website/personalSite/contactme.html'><li class='pageLinks'>contact me</li></a>
-					</ul>
-				</nav>
+				<div id="mySidenav" class="sidenav" onclick="closeNav()">
+  					<a class="closebtn" onclick="closeNav()">&times;</a>
+					<nav class='pageNavigation'>
+						<ul class='navigationLinks'>
+							<li class='pageLinks'><a href='http://www.joemorrello.com'>Home</a></li>
+							<li class='pageLinks'><a href='http://www.joemorrello.com/myworks'>My works</a></li>
+							<li class='pageLinks'><a href='http://www.joemorrello.com/myskills'>My skills</a></li>
+							<li class='pageLinks'><a href='http://www.joemorrello.com/links'>Links</a></li>
+							<li class='pageLinks'><a href='#'><img style='opacity: .2' src='C:\Users\JoMor\Documents\GitHub\website\personalSite\images/logo_white.png'></a></li>
+						</ul>
+					</nav>
+				</div>
+				<a onclick="openNav()" href='#'><img id='logo' src='C:\Users\JoMor\Documents\GitHub\website\personalSite\images/logo_white.png'></a>	
 			</div>
 			<div id='main'>
-				<div id='photoContainer'>
-					<img id='photo' src='images/joe.jpg'>
-				</div>
-				<h1>Joe Morrello</h1>
-				<h2>developer</h2>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in eleifend tellus, a tincidunt risus. Etiam nisl massa, interdum tincidunt efficitur vitae, cursus nec mi. Nam consequat a neque faucibus iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non magna ut turpis bibendum bibendum. Aenean convallis turpis leo, vel sodales felis cursus sit amet. Nulla tempus nunc non laoreet aliquam. Nunc eget orci lacus. Vestibulum tincidunt augue ex, sit amet interdum eros tincidunt a. Proin lorem purus, ultricies vitae massa et, faucibus sodales metus. Phasellus varius urna sed velit malesuada imperdiet. Nunc pretium massa nunc, ut tempus odio pharetra in. Aliquam sagittis mi nec lectus venenatis vulputate a quis lectus. Cras vel leo eleifend, pellentesque ipsum consectetur, vulputate augue.
+				<div id='myworks'>
+					<h2>Arduino Controlled Cannon</h2>
+						<p id= 'cannontext'>We were tasked with developing a safe, controllable cannon that can interest children in the STEM fields at a very young age.  We developed a cannon that was controllable from a distance via a control box that had added safety parameters so that no child would be in danger. Within the group, I collaborated with the design of the project, keeping in mind our parameters of safety, and a visible representation of basic physics. We used two Arduino Megas for the project, one that would be used on the cannon to regulate angular movement and pressure, and another that would be sending the appropriate commands for increasing and decreasing the movement and pressure, and for the final launch. My personal contribution was developing the communications between the Arduinos so that no bits were dropped as they communicated in serial, and to make sure this implementation would keep steady communication.</p>
+	                <h2>QBert in Assembly</h2>
+	                	<p>In 2016, as a school project, we were asked to develop a game using Assembly code. With a single partner, we went on to develop Qbert on our processor, utilizing several hardware features and systems.  The game relied on an ASCII interface that was communicated across the processor to your screen, over a serial connection. Additionally, the basic controls were implemented in the keyboard for the user, but features such as pausing were handled by buttons embedded in the processor. Additionally, for the display, we used the LEDs that were on the board to show the user how many lives they had, and if the game was currently in session. I collaborated with my partner in developing the control handling, score implementation and all LED setup and usage.</p>
+	                <h2>Android Map Tracker</h2>
+	                	<p>I oversaw and created an android Application utilizing the Google Maps and Location API to track a user’s movement and relay statistics back to the user We Utilized source control (Git) to collaborate and work with teammates on developing features and functionality. Personally, I implemented location functionality, tracking functionality, and major GUI components.</p>
+	            </div>
+            </div>
 
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in eleifend tellus, a tincidunt risus. Etiam nisl massa, interdum tincidunt efficitur vitae, cursus nec mi. Nam consequat a neque faucibus iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non magna ut turpis bibendum bibendum. Aenean convallis turpis leo, vel sodales felis cursus sit amet. Nulla tempus nunc non laoreet aliquam. Nunc eget orci lacus. Vestibulum tincidunt augue ex, sit amet interdum eros tincidunt a. Proin lorem purus, ultricies vitae massa et, faucibus sodales metus. Phasellus varius urna sed velit malesuada imperdiet. Nunc pretium massa nunc, ut tempus odio pharetra in. Aliquam sagittis mi nec lectus venenatis vulputate a quis lectus. Cras vel leo eleifend, pellentesque ipsum consectetur, vulputate augue.
-
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in eleifend tellus, a tincidunt risus. Etiam nisl massa, interdum tincidunt efficitur vitae, cursus nec mi. Nam consequat a neque faucibus iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non magna ut turpis bibendum bibendum. Aenean convallis turpis leo, vel sodales felis cursus sit amet. Nulla tempus nunc non laoreet aliquam. Nunc eget orci lacus. Vestibulum tincidunt augue ex, sit amet interdum eros tincidunt a. Proin lorem purus, ultricies vitae massa et, faucibus sodales metus. Phasellus varius urna sed velit malesuada imperdiet. Nunc pretium massa nunc, ut tempus odio pharetra in. Aliquam sagittis mi nec lectus venenatis vulputate a quis lectus. Cras vel leo eleifend, pellentesque ipsum consectetur, vulputate augue.
-
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in eleifend tellus, a tincidunt risus. Etiam nisl massa, interdum tincidunt efficitur vitae, cursus nec mi. Nam consequat a neque faucibus iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non magna ut turpis bibendum bibendum. Aenean convallis turpis leo, vel sodales felis cursus sit amet. Nulla tempus nunc non laoreet aliquam. Nunc eget orci lacus. Vestibulum tincidunt augue ex, sit amet interdum eros tincidunt a. Proin lorem purus, ultricies vitae massa et, faucibus sodales metus. Phasellus varius urna sed velit malesuada imperdiet. Nunc pretium massa nunc, ut tempus odio pharetra in. Aliquam sagittis mi nec lectus venenatis vulputate a quis lectus. Cras vel leo eleifend, pellentesque ipsum consectetur, vulputate augue.
-				</p>
-			</div>
-			<div id='footer'>
-				<h2>Lorem Ipsum</h2>
-				<!--Need content for footer-->
+			<div id='footer' class='medium'>
+				<h2>Contact Me</h2>
+				<li class='footerList'><a href='https://twitter.com/JoeMorrello'>Twitter</a></li>
+				<li class='footerList'><a href='https://www.linkedin.com/in/joemorrello'>LinkedIn</a></li>
+				<li class='footerList'><a href='mailto:jamorrel@buffalo.edu'>Email</a></li>
+				<li class='footerList'><a href ='https://github.com/jamorrel'>GitHub</a></li>
 			</div>
 		</div>
 	</body>
+									<!--===JQUERY SCRIPTS HERE===-->
+	<script src='jquery-3.1.0.min.js'></script>
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "50%";
+		}
+		function closeNav() {
+	    	document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+	<!--=== Fade in for initial page load ===-->
+	<script>
+    $( document ).ready(function() { 
+    	
+    	//$('#logo')
+    //animate all objects appearing in the webpage
+       /*$('#logo').css('visibility','visible').hide().fadeIn({queue:false,duration:1500});//make logo visible, animate it fading in
+       $('#logo').animate({opacity: 1, 'left':'0px'},1500);//logo is moved form its initial location to the upper left corner
+       $('li').delay('1500').css('visibility','visible').hide().fadeIn('1500');//lists are animated in
+       $('.morphinglinks').delay('2000').css('visibility','visible').hide().fadeIn('slow');//links are animated in
+       $('h1').delay('2500').css('visibility','visible').hide().fadeIn('slow');//header is faded in
+       $('p').delay('3000').css('visibility','visible').hide().fadeIn('slow');//p is faded in
+       $('#mainimage').delay('3500').css('visibility','visible').hide().fadeIn('slow');//image is faded in*/
+     });
+</script>
 </html>

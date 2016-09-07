@@ -5,6 +5,10 @@
 		<meta name='geo.region' content='Us-NY'>
 		<meta name='geo.placename' content='New York'>
 		<meta name="keywords" content="Computer Engineer, Developer,New York,New Jersey,East Coast, Job, application, Resume, HTML, CSS, Java, Android, C, C++, Coding, Programmer, Development, git, vim, emacs, Eclipse, Android Studio">
+	<meta name="description" content="Joe is a Computer Engineer with experience in software design and web development. He currently works for FCB Health in New York City, and lives in New Jersey." />
+    <meta name="author" content="Joe Morrello">
+    <meta name="geo.region" content="US-NY" />
+    <meta name="geo.placename" content="New York" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href= 'css/mainStyleSheet.css' rel='stylesheet'>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
@@ -12,45 +16,56 @@
 	<body>
 		<div id ='wrap'>
 			<div id='header'>
-			<!--navigation, logo and everything that will be across all webpages and layouts -->
-			<!--THINGS THAT NEED TO BE ADDED:
-
-				LOGO
-				PAGE LINKS
-				NAVIGATION STYLING(MOBILE FIRST)
-				CSS ANIMATIONS
-			-->
-				<!--NEED SOME FORM OF LOGO THAT WILL BE ABOVE HERE-->
-				<nav class='pageNavigation'>
-					<ul class='navigationLinks'>
-						<a href='#'><li class='pageLinks'>close</li></a>
-						<a href='file:///C:/Users/JoMor/Documents/GitHub/website/personalSite/aboutme.html'><li class='pageLinks'>About me</li></a>
-						<a href='file:///C:/Users/JoMor/Documents/GitHub/website/personalSite/myworks.html'><li class='pageLinks'>My works</li></a>
-						<a href='file:///C:/Users/JoMor/Documents/GitHub/website/personalSite/myskills.hmtl'><li class='pageLinks'>My skills</li></a>
-						<a href='file:///C:/Users/JoMor/Documents/GitHub/website/personalSite/contactme.html'><li class='pageLinks'>contact me</li></a>
-					</ul>
-				</nav>
+				<div id="mySidenav" class="sidenav" onclick="closeNav()">
+  					<a class="closebtn" onclick="closeNav()">&times;</a>
+					<nav class='pageNavigation'>
+						<ul class='navigationLinks'>
+							<li class='pageLinks'><a href='#'>Home</a></li>
+							<li class='pageLinks'><a href='#'>My works</a></li>
+							<li class='pageLinks'><a href='#'>My skills</a></li>
+							<li class='pageLinks'><a href='#'>Links</a></li>
+							<li class='pageLinks'><a href='#'><img style='opacity: .2' src='C:\Users\JoMor\Documents\GitHub\website\personalSite\images/logo_white.png'></a></li>
+						</ul>
+					</nav>
+				</div>
+				<a onclick="openNav()" href='#'><img id='logo' src='C:\Users\JoMor\Documents\GitHub\website\personalSite\images/logo_white.png'></a>	
 			</div>
 			<div id='main'>
-				<div id='photoContainer'>
-					<img id='photo' src='images/joe.jpg'>
-				</div>
-				<h1>Joe Morrello</h1>
-				<h2>developer</h2>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in eleifend tellus, a tincidunt risus. Etiam nisl massa, interdum tincidunt efficitur vitae, cursus nec mi. Nam consequat a neque faucibus iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non magna ut turpis bibendum bibendum. Aenean convallis turpis leo, vel sodales felis cursus sit amet. Nulla tempus nunc non laoreet aliquam. Nunc eget orci lacus. Vestibulum tincidunt augue ex, sit amet interdum eros tincidunt a. Proin lorem purus, ultricies vitae massa et, faucibus sodales metus. Phasellus varius urna sed velit malesuada imperdiet. Nunc pretium massa nunc, ut tempus odio pharetra in. Aliquam sagittis mi nec lectus venenatis vulputate a quis lectus. Cras vel leo eleifend, pellentesque ipsum consectetur, vulputate augue.
-
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in eleifend tellus, a tincidunt risus. Etiam nisl massa, interdum tincidunt efficitur vitae, cursus nec mi. Nam consequat a neque faucibus iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non magna ut turpis bibendum bibendum. Aenean convallis turpis leo, vel sodales felis cursus sit amet. Nulla tempus nunc non laoreet aliquam. Nunc eget orci lacus. Vestibulum tincidunt augue ex, sit amet interdum eros tincidunt a. Proin lorem purus, ultricies vitae massa et, faucibus sodales metus. Phasellus varius urna sed velit malesuada imperdiet. Nunc pretium massa nunc, ut tempus odio pharetra in. Aliquam sagittis mi nec lectus venenatis vulputate a quis lectus. Cras vel leo eleifend, pellentesque ipsum consectetur, vulputate augue.
-
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in eleifend tellus, a tincidunt risus. Etiam nisl massa, interdum tincidunt efficitur vitae, cursus nec mi. Nam consequat a neque faucibus iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non magna ut turpis bibendum bibendum. Aenean convallis turpis leo, vel sodales felis cursus sit amet. Nulla tempus nunc non laoreet aliquam. Nunc eget orci lacus. Vestibulum tincidunt augue ex, sit amet interdum eros tincidunt a. Proin lorem purus, ultricies vitae massa et, faucibus sodales metus. Phasellus varius urna sed velit malesuada imperdiet. Nunc pretium massa nunc, ut tempus odio pharetra in. Aliquam sagittis mi nec lectus venenatis vulputate a quis lectus. Cras vel leo eleifend, pellentesque ipsum consectetur, vulputate augue.
-
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in eleifend tellus, a tincidunt risus. Etiam nisl massa, interdum tincidunt efficitur vitae, cursus nec mi. Nam consequat a neque faucibus iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non magna ut turpis bibendum bibendum. Aenean convallis turpis leo, vel sodales felis cursus sit amet. Nulla tempus nunc non laoreet aliquam. Nunc eget orci lacus. Vestibulum tincidunt augue ex, sit amet interdum eros tincidunt a. Proin lorem purus, ultricies vitae massa et, faucibus sodales metus. Phasellus varius urna sed velit malesuada imperdiet. Nunc pretium massa nunc, ut tempus odio pharetra in. Aliquam sagittis mi nec lectus venenatis vulputate a quis lectus. Cras vel leo eleifend, pellentesque ipsum consectetur, vulputate augue.
-				</p>
+				
 			</div>
-			<div id='footer'>
-				<h2>Lorem Ipsum</h2>
-				<!--Need content for footer-->
+
+			<div id='footer' class='medium'>
+				<h2>Contact Me</h2>
+				<li class='footerList'><a href='https://twitter.com/JoeMorrello'>Twitter</a></li>
+				<li class='footerList'><a href='https://www.linkedin.com/in/joemorrello'>LinkedIn</a></li>
+				<li class='footerList'><a href='mailto:jamorrel@buffalo.edu'>Email</a></li>
+				<li class='footerList'><a href ='https://github.com/jamorrel'>GitHub</a></li>
 			</div>
 		</div>
 	</body>
+									<!--===JQUERY SCRIPTS HERE===-->
+	<script src='jquery-3.1.0.min.js'></script>
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "50%";
+		}
+		function closeNav() {
+	    	document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+	<!--=== Fade in for initial page load ===-->
+	<script>
+    $( document ).ready(function() { 
+    	
+    	//$('#logo')
+    //animate all objects appearing in the webpage
+       /*$('#logo').css('visibility','visible').hide().fadeIn({queue:false,duration:1500});//make logo visible, animate it fading in
+       $('#logo').animate({opacity: 1, 'left':'0px'},1500);//logo is moved form its initial location to the upper left corner
+       $('li').delay('1500').css('visibility','visible').hide().fadeIn('1500');//lists are animated in
+       $('.morphinglinks').delay('2000').css('visibility','visible').hide().fadeIn('slow');//links are animated in
+       $('h1').delay('2500').css('visibility','visible').hide().fadeIn('slow');//header is faded in
+       $('p').delay('3000').css('visibility','visible').hide().fadeIn('slow');//p is faded in
+       $('#mainimage').delay('3500').css('visibility','visible').hide().fadeIn('slow');//image is faded in*/
+     });
+</script>
 </html>
