@@ -1,0 +1,3 @@
+This will be the testing branch for any sort of full featured javascript functions that will soon be implemented into the site.
+
+please keep most/all unstable and insecure javascript functions here prior to release.
