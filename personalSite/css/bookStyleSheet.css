@@ -1,0 +1,54 @@
+*{
+margin:0px;
+padding: 0px;
+}
+/* 
+* OUR FONTS
+* font-family: 'Montserrat', sans-serif;
+* font-family: 'Raleway', sans-serif;
+*/
+html,body{
+	margin:0px auto;
+	padding:0px;
+	background-color:white;
+	color:black;
+	font-size: 24px;
+}
+body{
+	text-align: center;
+}
+h1,h2,h3,h4,h5,h6{
+font-family: 'Montserrat', sans-serif;
+font-size: 64px;
+}
+p{
+	font-family: 'Raleway', sans-serif;
+	margin: 20px;	
+}
+a{
+	color:white;
+	text-decoration: none;
+}
+.small{
+	font-size: 16px;
+}
+.medium{
+	font-size: 24px;
+}
+.large{
+	font-size: 32px;
+}
+input[type=text] {
+	padding: 10px;
+	border: none;
+	border-bottom: solid 2px #c9c9c9;
+	transition: border 0.7s;
+	font-size: 48px;
+	text-align: center;
+	margin-top:75px;
+		font-family: 'Raleway', sans-serif;
+}
+ input[type=text]:focus {
+ 	 outline: none;
+ 	border-bottom: solid 2px #969696;
+}

@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<link  href='#' rel ='icon' type='image/png'>
+		<meta name = 'author' content='Joe Morrello'>
+		<meta name='geo.region' content='Us-NY'>
+		<meta name='geo.placename' content='New York'>
+		<meta name="keywords" content="Computer Engineer, Developer,New York,New Jersey,East Coast, Job, application, Resume, HTML, CSS, Java, Android, C, C++, Coding, Programmer, Development, git, vim, emacs, Eclipse, Android Studio">
+	<meta name="description" content="Joe is a Computer Engineer with experience in software design and web development. He currently works for FCB Health in New York City, and lives in New Jersey." />
+    <meta name="author" content="Joe Morrello">
+    <meta name="geo.region" content="US-NY" />
+    <meta name="geo.placename" content="New York" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href= 'css/bookStyleSheet.css' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+	</head>
+	<body>
+		<div id ='wrap'>
+			<div id='header'>
+				<h1>Is The Book Better?</h1>
+			</div>
+			<div id='main'>
+				<input id='movieEntered' type="text" placeholder="Type in your movie here" />
+			</div>
+			<div id='footer' class='medium'>
+			</div>
+		</div>
+	</body>
+									<!--===JQUERY SCRIPTS HERE===-->
+	<script src='jquery-3.1.0.min.js'></script>
+	<script>
+		$('#movieEntered').keypress(function (e){
+			if (e.which == 13) {
+				$('#movieEntered').submit();
+				var testMovie = document.getElementById('movieEntered').value;
+				//alert(testMovie + " was better as a book");
+				return false;
+			}
+		});
+	</script>
+</html>

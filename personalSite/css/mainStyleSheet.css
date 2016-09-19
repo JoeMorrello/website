@@ -137,3 +137,9 @@ p:hover a{
 #myworks h2{
 	color:#696969;
 }
+input[type=text] {
+
+}
+ input[type=text]:focus {
+ 	outline:none;
+}
