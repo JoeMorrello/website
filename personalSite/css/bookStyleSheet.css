@@ -52,3 +52,7 @@ input[type=text] {
  	 outline: none;
  	border-bottom: solid 2px #969696;
 }
+#footer{
+	font-family: 'Montserrat', sans-serif;
+font-size: 64px;
+}

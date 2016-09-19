@@ -19,21 +19,25 @@
 				<h1>Is The Book Better?</h1>
 			</div>
 			<div id='main'>
-				<input id='movieEntered' type="text" placeholder="Type in your movie here" />
+				<input id='bookEntered' type="text" placeholder="Type in your Book here" />
+
 			</div>
-			<div id='footer' class='medium'>
+
+			<div id='footer' >
 			</div>
 		</div>
 	</body>
 									<!--===JQUERY SCRIPTS HERE===-->
 	<script src='jquery-3.1.0.min.js'></script>
 	<script>
-		$('#movieEntered').keypress(function (e){
+		$('#bookEntered').keypress(function (e){
 			if (e.which == 13) {
-				$('#movieEntered').submit();
-				var testMovie = document.getElementById('movieEntered').value;
+				$('#bookEntered').submit();
+				var testBook = document.getElementById('bookEntered').value;
 				//alert(testMovie + " was better as a book");
+				$('#footer').html(testBook + ' was better as a book.');
 				return false;
+
 			}
 		});
 	</script>
