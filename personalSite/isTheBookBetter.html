@@ -20,25 +20,35 @@
 			</div>
 			<div id='main'>
 				<input id='bookEntered' type="text" placeholder="Type in your Book here" />
-
+				
 			</div>
 
 			<div id='footer' >
+			<div id='loader'>Loading</div>
 			</div>
 		</div>
 	</body>
 									<!--===JQUERY SCRIPTS HERE===-->
 	<script src='jquery-3.1.0.min.js'></script>
+	<!--==This script takes in our typed value and spits it out to the screen==-->
 	<script>
+	function loadingResults(){
+		$('#loader').css(['opacity:','1']);
+		return true;
+	}
+	
 		$('#bookEntered').keypress(function (e){
 			if (e.which == 13) {
 				$('#bookEntered').submit();
 				var testBook = document.getElementById('bookEntered').value;
 				//alert(testMovie + " was better as a book");
-				$('#footer').html(testBook + ' was better as a book.');
+				//$('#footer').html(testBook + ' was better as a book.');
+				loadingResults();
 				return false;
 
 			}
 		});
 	</script>
+	<!--==LOADING SCRIPT==-->
+	<!--==need to find a way to check if the entered title is a book AND movie==-->
 </html>
