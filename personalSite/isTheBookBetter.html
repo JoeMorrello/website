@@ -36,19 +36,42 @@
 		$('#loader').css(['opacity:','1']);
 		return true;
 	}
+	function test(){
+		$.get('https://www.goodreads.com/book/title.xml?author=Arthur+Conan+Doyle&key=zfPxaXJCpkBIhvtIFAtbHA&title=Hound+of+the+Baskervilles',function( data ) {
+			var rating = $(data).find('average_rating').text();
+			//return rating;
+			alert('data loaded:' + rating );
+		});
+		//$('#footer').text('https://www.goodreads.com/book/title.xml?author=Arthur+Conan+Doyle&key=zfPxaXJCpkBIhvtIFAtbHA&title=Hound+of+the+Baskervilles');
+	}
+	function test2(){
+		$.ajax({
+			type:'GET',
+			url:'https://www.goodreads.com/book/title.xml?author=Arthur+Conan+Doyle&key=zfPxaXJCpkBIhvtIFAtbHA&title=Hound+of+the+Baskervilles',
+			dataType:'xml',
+			success:xmlTester
+		});
+	}
+
 	
 		$('#bookEntered').keypress(function (e){
 			if (e.which == 13) {
 				$('#bookEntered').submit();
 				var testBook = document.getElementById('bookEntered').value;
 				//alert(testMovie + " was better as a book");
-				//$('#footer').html(testBook + ' was better as a book.');
+				$('#footer').html(testBook + ' was better as a book.');
 				loadingResults();
 				return false;
 
 			}
 		});
+	function xmlTester(xml){
+		var testing=xml.getElementById('average_rating');
+		alert(testing);
+	}
 	</script>
 	<!--==LOADING SCRIPT==-->
 	<!--== need to find a way to check if the entered title is a book AND movie==-->
 </html>
+<!--4.084.203.994.193.884.074.044.223.954.733.773.98-->
+<!--NOTE: USING EXTENSION FOR CHROME TO ALLOW FOR ACCESS_CONTROL_ORIGIN CALLS WITHOUT PROPER HEADER LOCALLY-->
