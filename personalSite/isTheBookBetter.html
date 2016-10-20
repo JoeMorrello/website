@@ -5,10 +5,10 @@
 		<meta name='geo.region' content='Us-NY'>
 		<meta name='geo.placename' content='New York'>
 		<meta name="keywords" content="Computer Engineer, Developer,New York,New Jersey,East Coast, Job, application, Resume, HTML, CSS, Java, Android, C, C++, Coding, Programmer, Development, git, vim, emacs, Eclipse, Android Studio">
-	<meta name="description" content="Joe is a Computer Engineer with experience in software design and web development. He currently works for FCB Health in New York City, and lives in New Jersey." />
-    <meta name="author" content="Joe Morrello">
-    <meta name="geo.region" content="US-NY" />
-    <meta name="geo.placename" content="New York" />
+		<meta name="description" content="Joe is a Computer Engineer with experience in software design and web development. He currently works for FCB Health in New York City, and lives in New Jersey." />
+    	<meta name="author" content="Joe Morrello">
+    	<meta name="geo.region" content="US-NY" />
+    	<meta name="geo.placename" content="New York" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href= 'css/bookStyleSheet.css' rel='stylesheet'>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
@@ -20,11 +20,9 @@
 			</div>
 			<div id='main'>
 				<input id='bookEntered' type="text" placeholder="Type in your Book here" />
-				
 			</div>
-
 			<div id='footer' >
-			<div id='loader'>Loading</div>
+				<div id='loader'>Loading</div>
 			</div>
 		</div>
 	</body>
@@ -32,46 +30,47 @@
 	<script src='jquery-3.1.0.min.js'></script>
 	<!--==This script takes in our typed value and spits it out to the screen==-->
 	<script>
-	function loadingResults(){
-		$('#loader').css(['opacity:','1']);
-		return true;
-	}
-	function test(){
-		$.get('https://www.goodreads.com/book/title.xml?author=Arthur+Conan+Doyle&key=zfPxaXJCpkBIhvtIFAtbHA&title=Hound+of+the+Baskervilles',function( data ) {
-			var rating = $(data).find('average_rating').text();
-			//return rating;
-			alert('data loaded:' + rating );
-		});
-		//$('#footer').text('https://www.goodreads.com/book/title.xml?author=Arthur+Conan+Doyle&key=zfPxaXJCpkBIhvtIFAtbHA&title=Hound+of+the+Baskervilles');
-	}
-	function test2(){
-		$.ajax({
-			type:'GET',
-			url:'https://www.goodreads.com/book/title.xml?author=Arthur+Conan+Doyle&key=zfPxaXJCpkBIhvtIFAtbHA&title=Hound+of+the+Baskervilles',
-			dataType:'xml',
-			success:xmlTester
-		});
-	}
-
-	
+		var bookEntered;
+		var titleSearchURL = 'https://www.goodreads.com/book/title.xml?key=zfPxaXJCpkBIhvtIFAtbHA&title=';
+		function test(){
+			$.get('https://www.goodreads.com/book/title.xml?key=zfPxaXJCpkBIhvtIFAtbHA&title=Harry+potter+and+the+sorcerers+stone',function( data ) {
+				var rating = $(data).find('average_rating').text().substr(0,4);
+				alert('data loaded:' + rating );//returns our rating
+				$('#footer').html('This book recieved a '+rating+' out of 5');
+			});
+		}
+		
 		$('#bookEntered').keypress(function (e){
 			if (e.which == 13) {
+				parseBookEntered();
+				searchBookRating(titleSearchURL);
 				$('#bookEntered').submit();
-				var testBook = document.getElementById('bookEntered').value;
+				//var testBook = document.getElementById('bookEntered').value;
 				//alert(testMovie + " was better as a book");
-				$('#footer').html(testBook + ' was better as a book.');
-				loadingResults();
-				return false;
-
+				//$('#footer').html(testBook + ' was better as a book.');
+				//loadingResults();
+	
+				return true;
 			}
 		});
-	function xmlTester(xml){
-		var testing=xml.getElementById('average_rating');
-		alert(testing);
-	}
+
+		function parseBookEntered(){
+			
+			var book = document.getElementById('bookEntered').value.split(' ');
+			for(var i=0; i<book.length;i++){
+				titleSearchURL = titleSearchURL +'+'+book[i];	
+			}
+			return titleSearchURL;
+		}
+		function searchBookRating(argument) {
+			$.get(argument,function( data ){
+				var rating = $(data).find('average_rating').text().substr(0,4);
+				alert('data loaded:' + rating );//returns our rating
+				$('#footer').html('This book recieved a '+rating+' out of 5');
+				});
+			}
+
 	</script>
-	<!--==LOADING SCRIPT==-->
-	<!--== need to find a way to check if the entered title is a book AND movie==-->
 </html>
 <!--4.084.203.994.193.884.074.044.223.954.733.773.98-->
 <!--NOTE: USING EXTENSION FOR CHROME TO ALLOW FOR ACCESS_CONTROL_ORIGIN CALLS WITHOUT PROPER HEADER LOCALLY-->
